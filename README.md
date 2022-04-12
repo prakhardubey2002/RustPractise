@@ -151,3 +151,28 @@ fn main() {
    println!("{:?},",arr);
 }
 ```
+
+###### to print length of array
+```Rust
+fn main() {
+   let arr:[u8;4]=[1,2,3,4];
+   println!("length is {}",arr.len());
+}
+```
+## Tuple in rust
+tuple has capability to hold different data type in array lile format
+```Rust
+fn main() {
+   let tuple:(u8,bool,f32)=(5,true,2.1);
+   println!("{:?}",tuple);
+}
+```
+
+###### Destructuring of Tuple
+```Rust
+fn main() {
+   let tuple:(u8,bool,f32)=(5,true,2.1);
+   let (a,b,c)=tuple;
+   println!("First: {},second: {},Third: {} ", a,b,c )
+}
+```
