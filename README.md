@@ -134,11 +134,20 @@ fn main() {
 
 ###### Boolean
 
-boolean can be declared using Bool after declaration of variable name after a semi-colon
+boolean can be declared using Bool after declaration of variable with semi-colon in between
 
 ```Rust
 fn main() {
      let is_true:bool=true;
     println!("isTrue:{}",is_true)
+}
+```
+## Aray is rust
+Array declartion is followed by bracket having integer(i8,u8 ets) or float type(F32) and array length with colon in between
+
+```Rust
+fn main() {
+   let arr:[u8;4]=[1,2,3,4];
+   println!("{:?},",arr);
 }
 ```
