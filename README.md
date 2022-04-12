@@ -33,8 +33,8 @@ fn main() {
 ```bash
   .\main.exe
 ```
-
-## linking with link.exe failed: exit code: 1
+## Compilation error due to linker
+#### Linking with link.exe failed: exit code: 1
 
 (If this error comes up during compilation )
 
@@ -86,7 +86,7 @@ In println use curly braces {} in places where you want to pass string followedb
  }
 ```
 
-## Variable is Rust
+## Variable in Rust
 
 ###### Unsigned Integer
 
@@ -112,7 +112,7 @@ fn main() {
 
 ###### Float
 
-Declartion is same for float but instead for iand u f is used like F32
+Declartion is same for float but instead for "i" and "u" "f" is used like F32
 
 ```Rust
 fn main() {
@@ -134,7 +134,7 @@ fn main() {
 
 ###### Boolean
 
-boolean can be declared using Bool after declaration of variable with semi-colon in between
+Boolean can be declared using Bool after declaration of variable with semi-colon in between
 
 ```Rust
 fn main() {
@@ -142,7 +142,7 @@ fn main() {
     println!("isTrue:{}",is_true)
 }
 ```
-## Aray is rust
+## Array in rust
 Array declartion is followed by bracket having integer(i8,u8 ets) or float type(F32) and array length with colon in between
 
 ```Rust
