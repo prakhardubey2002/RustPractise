@@ -160,7 +160,7 @@ fn main() {
 }
 ```
 ## Tuple in rust
-tuple has capability to hold different data type in array lile format
+Tuple has capability to hold different data type in array like format
 ```Rust
 fn main() {
    let tuple:(u8,bool,f32)=(5,true,2.1);
