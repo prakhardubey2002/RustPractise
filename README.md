@@ -176,3 +176,26 @@ fn main() {
    println!("First: {},second: {},Third: {} ", a,b,c )
 }
 ```
+## Function in rust
+Function in rust are by default private until "pub" is added to make them public 
+In below function (num:u8) is unsigned integer of 8 bit that can this function take and boolean is data type that this function will return after executing its logic
+
+```Rust
+fn main() {
+   println!("{}",is_even(1));
+}
+pub fn is_even(num:u8)-> bool{
+    let digit:u8 = num%2;
+    digit==0
+}
+```
+## Mutability 
+Rust compiler does not allow its variable to be updated or changed after its declaration but it can be changed or mutated using keyword "mut" between let and variable name
+
+```Rust
+fn main(){
+    let mut num =5;//mut let compiler know that we want to change or mtate value in our code aftewards
+    num = 3;
+    println!("{}",num);
+}
+```
