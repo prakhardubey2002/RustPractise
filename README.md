@@ -152,11 +152,20 @@ fn main() {
 }
 ```
 
-###### to print length of array
+###### Length of array
 ```Rust
 fn main() {
    let arr:[u8;4]=[1,2,3,4];
    println!("length is {}",arr.len());
+}
+```
+###### Slice in array
+Array can be broken down using slice by derefrencing main array.The first value passed in slice is inclusive and last value added is exclusive but primary difference behind array and slice is that slice length is not known during compile time but array's length is known so when passing a slice in a function length is not definedand "&" value is added so that compiler can unerstand it has derefrenced value
+```Rust
+fn main() {
+   let arr = [0,1,2,3];
+    let slice = &arr[1..3];
+    println!("{:?}",slice);//[1,2]
 }
 ```
 ## Tuple in rust
