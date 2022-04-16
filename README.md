@@ -208,3 +208,17 @@ fn main(){
     println!("{}",num);
 }
 ```
+## Conditionals in rust
+If,Else condition are same in rust as other language only difference is that condition does'nt have parenthesis 
+```Rust
+fn main(){
+   let n:u8=4;
+    if n>3 {
+        println!("Greater than 2");
+    }
+    else n<0 {
+        println!("Less than 2");
+    
+    }
+}
+```
