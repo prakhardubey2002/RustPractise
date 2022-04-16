@@ -209,7 +209,7 @@ fn main(){
 }
 ```
 ## Conditionals in rust
-If,Else condition are same in rust as other language only difference is that condition does'nt have parenthesis 
+If,Else,while,for condition are same in rust as other language only difference is that condition does'nt have parenthesis 
 ```Rust
 fn main(){
    let n:u8=4;
@@ -219,6 +219,22 @@ fn main(){
     else n<0 {
         println!("Less than 2");
     
+    }
+    for i in 0..6{   
+        println!("{}",i);
+    }
+}
+```
+## Match
+Similar to switch statement in most languages rust have "Match" which is used for comaprison between mutiple cases with different values and condition
+```Rust
+fn main(){
+    let i = 4;
+    match i{
+        0 => println!("0"),
+        1 | 2 => println!("1,2"),
+        3..=4 => println!("3,4"),
+        _ =>println!("default")
     }
 }
 ```
