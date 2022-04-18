@@ -312,3 +312,20 @@ fn main(){
     vec.remove(0);
 }
 ```
+
+## HashMap
+Hashmap are similar to array but here every lement has key index and element are addresed in method using refrence to there index like &2
+```Rust
+use std::collections::HashMap;
+    fn main(){
+        let mut map = HashMap::new();
+
+         map.insert(0, "HI1");
+         map.insert(1, "HI2");
+         println!("{:?}",map);
+         
+         map.remove(&0);
+         println!("{:?}",map);
+}
+```
+
