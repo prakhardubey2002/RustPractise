@@ -302,4 +302,13 @@ trait Animal{
 }
 }
 ```
-
+## Vector
+Vector is dynamically manipulatable form of array that come from standard library of rust which support method like push,remove,index ets
+```Rust
+fn main(){
+    let mut vec: Vec<i64>=vec![1,2,3,4,5];
+    vec.len();
+    vec.push(8);
+    vec.remove(0);
+}
+```
