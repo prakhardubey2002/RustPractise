@@ -1,7 +1,7 @@
 
 fn divide(dividend:i32,divisor:i32)-> Option<i32> {
  if dividend % divisor !=0 {
-     None//None to indicate failure or lack of value,and
+     None//None to indicate failure or lack of value
  }
  else{
      Some(dividend/divisor)//Some(Value),a tupe struct that wraps a value with type t

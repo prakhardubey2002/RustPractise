@@ -33,7 +33,9 @@ fn main() {
 ```bash
   .\main.exe
 ```
+
 ## Compilation error due to linker
+
 #### Linking with link.exe failed: exit code: 1
 
 (If this error comes up during compilation )
@@ -52,7 +54,7 @@ then
 
 ## What is Cargo?
 
-Cargo is package system of rust just like npm for javascript 
+Cargo is package system of rust just like npm for javascript
 
 Command for cargo hello world program-
 
@@ -142,7 +144,9 @@ fn main() {
     println!("isTrue:{}",is_true)
 }
 ```
+
 ## Array in rust
+
 Array declartion is followed by bracket having integer(i8,u8 ets) or float type(F32) and array length with colon in between
 
 ```Rust
@@ -153,14 +157,18 @@ fn main() {
 ```
 
 ###### Length of array
+
 ```Rust
 fn main() {
    let arr:[u8;4]=[1,2,3,4];
    println!("length is {}",arr.len());
 }
 ```
+
 ###### Slice in array
+
 Array can be broken down using slice by derefrencing main array.The first value passed in slice is inclusive and last value added is exclusive but primary difference behind array and slice is that slice length is not known during compile time but array's length is known so when passing a slice in a function length is not definedand "&" value is added so that compiler can unerstand it has derefrenced value
+
 ```Rust
 fn main() {
    let arr = [0,1,2,3];
@@ -168,8 +176,11 @@ fn main() {
     println!("{:?}",slice);//[1,2]
 }
 ```
+
 ## Tuple in rust
+
 Tuple has capability to hold different data type in array like format
+
 ```Rust
 fn main() {
    let tuple:(u8,bool,f32)=(5,true,2.1);
@@ -178,6 +189,7 @@ fn main() {
 ```
 
 ###### Destructuring of Tuple
+
 ```Rust
 fn main() {
    let tuple:(u8,bool,f32)=(5,true,2.1);
@@ -185,8 +197,10 @@ fn main() {
    println!("First: {},second: {},Third: {} ", a,b,c )
 }
 ```
+
 ## Function in rust
-Function in rust are by default private until "pub" is added to make them public 
+
+Function in rust are by default private until "pub" is added to make them public
 In below function (num:u8) is unsigned integer of 8 bit that can this function take and boolean is data type that this function will return after executing its logic
 
 ```Rust
@@ -198,7 +212,9 @@ pub fn is_even(num:u8)-> bool{
     digit==0
 }
 ```
-## Mutability 
+
+## Mutability
+
 Rust compiler does not allow its variable to be updated or changed after its declaration but it can be changed or mutated using keyword "mut" between let and variable name
 
 ```Rust
@@ -208,8 +224,11 @@ fn main(){
     println!("{}",num);
 }
 ```
+
 ## Conditionals in rust
-If,Else,while,for condition are same in rust as other language only difference is that condition does'nt have parenthesis 
+
+If,Else,while,for condition are same in rust as other language only difference is that condition does'nt have parenthesis
+
 ```Rust
 fn main(){
    let n:u8=4;
@@ -218,15 +237,18 @@ fn main(){
     }
     else n<0 {
         println!("Less than 2");
-    
+
     }
-    for i in 0..6{   
+    for i in 0..6{
         println!("{}",i);
     }
 }
 ```
+
 ## Match
+
 Similar to switch statement in most languages rust have "Match" which is used for comaprison between mutiple cases with different values and condition
+
 ```Rust
 fn main(){
     let i = 4;
@@ -239,8 +261,10 @@ fn main(){
 }
 ```
 
-## Structures 
-Structure give us ability define an object with  capablilty to hold multiple data type in an definite user-defined structure,method inside structure are implemented using keyword "impl"
+## Structures
+
+Structure give us ability define an object with capablilty to hold multiple data type in an definite user-defined structure,method inside structure are implemented using keyword "impl"
+
 ```Rust
   fn main(){
     let name =String::from("CorolinaParakit")
@@ -263,7 +287,9 @@ impl Bird{//impl mean implementation of method here in struct we define a functi
 ```
 
 ###### Traits (Inhertiance of rust)
+
 Trait let us extend structure type by adding data/function into structure
+
 ```Rust
 fn main(){
     let name =String::from("Parrot");
@@ -298,12 +324,15 @@ trait Animal{
     fn is_animal(&self)->bool{
         true
     }
-    
+
 }
 }
 ```
+
 ## Vector
+
 Vector is dynamically manipulatable form of array that come from standard library of rust which support method like push,remove,index ets
+
 ```Rust
 fn main(){
     let mut vec: Vec<i64>=vec![1,2,3,4,5];
@@ -314,7 +343,9 @@ fn main(){
 ```
 
 ## HashMap
+
 Hashmap are similar to array but here every lement has key index and element are addresed in method using refrence to there index like &2
+
 ```Rust
 use std::collections::HashMap;
     fn main(){
@@ -323,9 +354,52 @@ use std::collections::HashMap;
          map.insert(0, "HI1");
          map.insert(1, "HI2");
          println!("{:?}",map);
-         
+
          map.remove(&0);
          println!("{:?}",map);
 }
 ```
 
+## Options
+
+Options are type of conditional output which execute on fulfillment of condition
+
+```Rust
+fn divide(dividend:i32,divisor:i32)-> Option<i32> {
+ if dividend % divisor !=0 {
+     None
+ }
+ else{
+     Some(dividend/divisor)
+     }
+}
+fn main(){
+    let divide1:Option<i32>=divide(4,2);
+    println!("unwrap form: {}",divide1.unwrap());
+    }
+```
+
+## Result
+
+Result have two working Parameter err and Ok which mean at failure user defined error execute and on success ok execute
+
+```Rust
+#[derive(Debug)]
+enum MyError{
+    Error1
+}
+fn divide(dividend:i32,divisor:i32)-> Result<i32,MyError> {
+    if dividend % divisor !=0 {
+        Err(MyError::Error1)
+    }
+    else{
+       Ok(dividend/divisor)
+        }
+   }
+
+fn main(){
+    let divide = divide(4,2);
+    let res = divide.expect("we crashed");
+    println!("{}",res);
+}
+```
