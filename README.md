@@ -403,3 +403,18 @@ fn main(){
     println!("{}",res);
 }
 ```
+
+## Macros
+
+Similar to other language to remove repetation macros are used in rust
+
+```Rust
+macro_rules! say_hello {
+    () => {
+        println!("Hello World")
+    };
+}
+fn main(){
+    say_hello!()
+}
+```
