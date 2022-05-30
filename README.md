@@ -418,3 +418,25 @@ fn main(){
     say_hello!()
 }
 ```
+
+## Panic method of Error handling
+
+panic is used for giving command line based message for error
+
+```Rust
+fn avail(bev:&str){
+    if bev=="not drinkable"{
+        panic!("toxic drink!!");
+    }
+    println!("The drink is {} ",bev);
+}
+fn main(){
+    avail("drinkable");
+    avail("not drinkable");
+}
+```
+
+```bash
+The drink is drinkable
+thread 'main' panicked at 'toxic drink!!', panic.rs:3:9
+```
